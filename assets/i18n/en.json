@@ -11,8 +11,8 @@
     },
     "home": {
         "hero_badge": "Building Intelligence & Energy Grid",
-        "hero_title": "Data-Driven <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-teal-600\">Net Zero Buildings</span> <br> & Resilient Grids",
-        "hero_desc": "BIEG Data Lab applies AI and Digital Twin technologies to solve urban energy transition challenges. From single-building efficiency to regional grid coordination, we provide full-scale smart solutions.",
+        "hero_title": "BIEG Data Lab",
+        "hero_desc": "Building Intelligence and Energy Grid Data Laboratory. Focusing on modeling, forecasting, and optimization of smart building and grid data, connecting energy decisions from city to community.",
         "hero_btn_research": "Explore Research",
         "hero_btn_team": "Meet the Team",
         "cta_research": "View Research",
