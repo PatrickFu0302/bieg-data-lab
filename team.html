@@ -713,70 +713,236 @@
                     </div>
 
                     <!-- Collaborators Carousel -->
-                    <div class="mt-16 relative overflow-hidden group">
-                        <div
-                            class="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-slate-100 to-transparent z-10">
-                        </div>
-                        <div
-                            class="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-slate-100 to-transparent z-10">
+                    <div class="mt-16 relative group px-4 md:px-12">
+                        <!-- Carousel Container -->
+                        <div class="overflow-hidden rounded-xl">
+                            <div id="partners-carousel-track"
+                                class="flex transition-transform duration-500 ease-in-out">
+
+                                <!-- VIP: Adrian Chong -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="school" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Adrian Chong</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">
+                                            National University of Singapore</p>
+                                        <p class="text-slate-600 text-sm leading-6"
+                                            data-i18n="international.adrian_desc">
+                                            Collaborating on building environment and ISDB research.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- VIP: Hussain Kazmi -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="landmark" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Hussain Kazmi</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">KU
+                                            Leuven (Belgium)</p>
+                                        <p class="text-slate-600 text-sm leading-6"
+                                            data-i18n="international.hussain_desc">
+                                            Joint research with the ELECTA laboratory on demand response and grid
+                                            resilience.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- VIP: Jonathan Roth -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-red-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Jonathan Roth</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">
+                                            Stanford University</p>
+                                        <p class="text-slate-600 text-sm leading-6"
+                                            data-i18n="international.jonathan_desc">
+                                            Research collaboration on advanced energy systems and data science.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- VIP: ETH Zurich -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="globe-2" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Bianca Picchetti & Matias
+                                            Quintana</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">ETH
+                                            Zürich</p>
+                                        <p class="text-slate-600 text-sm leading-6" data-i18n="international.eth_desc">
+                                            Joint research initiatives.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Thomas Merckx -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Thomas Merckx</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">Vrije
+                                            Universiteit Brussel</p>
+                                        <p class="text-slate-600 text-sm leading-6">Biology Department</p>
+                                    </div>
+                                </div>
+
+                                <!-- Benjamin Jarrett -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Benjamin Jarrett</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">Lund
+                                            University</p>
+                                        <p class="text-slate-600 text-sm leading-6">Department of Biology</p>
+                                    </div>
+                                </div>
+
+                                <!-- Hieng-Ming Ting -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Hieng-Ming Ting</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">NTU
+                                        </p>
+                                        <p class="text-slate-600 text-sm leading-6">Institute of Plant Biology</p>
+                                    </div>
+                                </div>
+
+                                <!-- Li Lo -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Li Lo</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">NTU
+                                        </p>
+                                        <p class="text-slate-600 text-sm leading-6">Department of Geosciences</p>
+                                    </div>
+                                </div>
+
+                                <!-- Nicholas Horrocks -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Nicholas Horrocks</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">
+                                            Cambridge Institute</p>
+                                        <p class="text-slate-600 text-sm leading-6">Therapeutic Immunology</p>
+                                    </div>
+                                </div>
+
+                                <!-- Tanmay Dixit -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Tanmay Dixit</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">
+                                            University of Cambridge</p>
+                                        <p class="text-slate-600 text-sm leading-6">Department of Zoology</p>
+                                    </div>
+                                </div>
+
+                                <!-- Robert Dudley -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Robert Dudley</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">UC
+                                            Berkeley</p>
+                                        <p class="text-slate-600 text-sm leading-6">Integrative Biology</p>
+                                    </div>
+                                </div>
+
+                                <!-- Sara Miller -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Sara Miller</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">UMSL
+                                        </p>
+                                        <p class="text-slate-600 text-sm leading-6">Department of Biology</p>
+                                    </div>
+                                </div>
+
+                                <!-- Wei-Ping Chan -->
+                                <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                                    <div
+                                        class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 h-full hover:-translate-y-1 transition-transform group/card">
+                                        <div
+                                            class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-6 group-hover/card:scale-110 transition-transform">
+                                            <i data-lucide="user" class="w-6 h-6"></i>
+                                        </div>
+                                        <h3 class="text-xl font-bold text-slate-900 mb-2">Wei-Ping Chan</h3>
+                                        <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">
+                                            Harvard University</p>
+                                        <p class="text-slate-600 text-sm leading-6">Rowland Institute</p>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
-                        <div class="flex gap-8 animate-scroll whitespace-nowrap py-4" id="collaborators-track">
-                            <!-- Items will be duplicated for infinite scroll -->
-                            <!-- VIPs -->
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Adrian Chong</h4>
-                                <p class="text-xs text-slate-500">National University of Singapore</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Hussain Kazmi</h4>
-                                <p class="text-xs text-slate-500">KU Leuven (Belgium)</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Jonathan Roth</h4>
-                                <p class="text-xs text-slate-500">Stanford University</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Bianca Picchetti & Matias Quintana</h4>
-                                <p class="text-xs text-slate-500">ETH Zürich</p>
-                            </div>
-                            <!-- Existing -->
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Thomas Merckx</h4>
-                                <p class="text-xs text-slate-500">Biology Department, Vrije Universiteit Brussel</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Benjamin Jarrett</h4>
-                                <p class="text-xs text-slate-500">Department of Biology, Lund University</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Hieng-Ming Ting</h4>
-                                <p class="text-xs text-slate-500">Institute of Plant Biology, NTU</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Li Lo</h4>
-                                <p class="text-xs text-slate-500">Department of Geosciences, NTU</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Nicholas Horrocks</h4>
-                                <p class="text-xs text-slate-500">Cambridge Institute of Therapeutic Immunology</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Tanmay Dixit</h4>
-                                <p class="text-xs text-slate-500">Department of Zoology, University of Cambridge</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Robert Dudley</h4>
-                                <p class="text-xs text-slate-500">Integrative Biology, UC Berkeley</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Sara Miller</h4>
-                                <p class="text-xs text-slate-500">Department of Biology, UMSL</p>
-                            </div>
-                            <div class="inline-flex flex-col items-center justify-center min-w-[250px] text-center">
-                                <h4 class="font-bold text-slate-800">Wei-Ping Chan</h4>
-                                <p class="text-xs text-slate-500">Rowland Institute at Harvard University</p>
-                            </div>
+                        <!-- Navigation Buttons -->
+                        <button id="partners-prev"
+                            class="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg border border-slate-100 text-slate-600 hover:text-blue-600 hover:scale-110 transition-all z-10 hidden md:flex">
+                            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                        </button>
+                        <button id="partners-next"
+                            class="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-2 rounded-full shadow-lg border border-slate-100 text-slate-600 hover:text-blue-600 hover:scale-110 transition-all z-10 hidden md:flex">
+                            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                        </button>
+
+                        <!-- Dots -->
+                        <div class="flex justify-center gap-2 mt-6" id="partners-dots">
+                            <!-- Dots will be generated by JS -->
                         </div>
                     </div>
 
