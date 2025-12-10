@@ -269,4 +269,36 @@
     } else {
         init();
     }
+
+    // PI Show More Toggle Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('pi-toggle-btn');
+        const details = document.getElementById('pi-details');
+        const icon = document.getElementById('pi-toggle-icon');
+        const btnText = toggleBtn?.querySelector('span');
+
+        if (toggleBtn && details) {
+            toggleBtn.addEventListener('click', () => {
+                const isHidden = details.classList.contains('hidden');
+                if (isHidden) {
+                    details.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                    if (btnText) btnText.textContent = 'Show Less';
+                } else {
+                    details.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                    if (btnText) btnText.textContent = 'Show Full Profile';
+                    // Scroll back to top of PI section if needed
+                    toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        }
+
+        // Carousel Infinite Scroll Setup
+        const track = document.getElementById('collaborators-track');
+        if (track) {
+            // Duplicate content for seamless scrolling
+            track.innerHTML += track.innerHTML;
+        }
+    });
 })();
