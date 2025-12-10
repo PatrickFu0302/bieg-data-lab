@@ -318,7 +318,7 @@
             let currentIndex = 0;
             const cards = partnersTrack.children;
             const totalCards = cards.length;
-            let cardsPerView = window.innerWidth >= 768 ? 2 : 1;
+            let cardsPerView = window.innerWidth >= 1024 ? 5 : (window.innerWidth >= 768 ? 3 : 1);
             let maxIndex = Math.ceil(totalCards / cardsPerView) - 1;
             let autoPlayInterval;
 
@@ -381,7 +381,7 @@
 
             // Responsive Handling
             window.addEventListener('resize', () => {
-                const newCardsPerView = window.innerWidth >= 768 ? 2 : 1;
+                const newCardsPerView = window.innerWidth >= 1024 ? 5 : (window.innerWidth >= 768 ? 3 : 1);
                 if (newCardsPerView !== cardsPerView) {
                     cardsPerView = newCardsPerView;
                     maxIndex = Math.ceil(totalCards / cardsPerView) - 1;
