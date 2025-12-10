@@ -284,5 +284,14 @@
     "footer": {
         "lab_name": "BIEG Data Lab",
         "meta": "© 2025 BIEG Data Lab | Dept. of Bioenvironmental Systems Engineering, NTU"
+    },
+    "publications": {
+        "title": "Publications",
+        "subtitle": "Selected SCI/SCIE Journal Papers and International Conference Proceedings",
+        "journal_title": "SCI/SCIE Journal Papers",
+        "conf_title": "Conference Proceedings",
+        "tag_journal": "Journal",
+        "tag_conf": "Conference",
+        "tag_best_paper": "🏆 Best Paper"
     }
 }

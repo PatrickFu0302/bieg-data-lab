@@ -284,5 +284,14 @@
     "footer": {
         "lab_name": "BIEG Data Lab",
         "meta": "© 2025 BIEG Data Lab | 國立台灣大學 生物環境系統工程學系"
+    },
+    "publications": {
+        "title": "代表著作",
+        "subtitle": "SCI/SCIE 頂尖期刊論文與國際研討會發表",
+        "journal_title": "SCI/SCIE 期刊論文",
+        "conf_title": "國際研討會論文",
+        "tag_journal": "期刊",
+        "tag_conf": "會議",
+        "tag_best_paper": "🏆 最佳論文"
     }
 }
