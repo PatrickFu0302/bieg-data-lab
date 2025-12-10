@@ -67,6 +67,8 @@
         "role": "Principal Investigator / Ph.D.",
         "bio": "專注於建築能源模擬、AI 數據驅動分析與電網韌性研究。擁有新加坡國立大學博士學位，並具備歐洲跨國能源公司 (Centrica) 實戰經驗。致力於結合學術理論與業界實務，推動淨零建築與智慧電網的發展。",
         "cv_btn": "下載完整履歷 (CV)",
+        "show_more": "查看完整個人資料",
+        "show_less": "收合個人資料",
         "location": "Taipei / Singapore / Europe",
         "exp_global_title": "淨零跨國經歷",
         "exp_global_desc": "擁有 NUS 博士與歐洲 Centrica 能源公司研發經驗。參與歐盟 Dedalus、DigiRES 等大型淨零計畫。",

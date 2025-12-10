@@ -272,28 +272,35 @@
 
     // PI Show More Toggle Logic
     document.addEventListener('DOMContentLoaded', () => {
-        const toggleBtn = document.getElementById('pi-toggle-btn');
+        const showMoreBtn = document.getElementById('pi-show-more-btn');
+        const showLessBtn = document.getElementById('pi-show-less-btn');
+        const wrapper = document.getElementById('pi-details-wrapper');
         const details = document.getElementById('pi-details');
-        const icon = document.getElementById('pi-toggle-icon');
-        const btnText = toggleBtn?.querySelector('span');
 
-        if (toggleBtn && details) {
-            toggleBtn.addEventListener('click', () => {
-                const isHidden = details.classList.contains('hidden');
-                if (isHidden) {
-                    details.classList.remove('hidden');
-                    icon.style.transform = 'rotate(180deg)';
-                    if (btnText) btnText.textContent = 'Show Less';
-                } else {
-                    details.classList.add('hidden');
-                    icon.style.transform = 'rotate(0deg)';
-                    if (btnText) btnText.textContent = 'Show Full Profile';
-                    // Scroll back to top of PI section if needed
-                    toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+        if (showMoreBtn && showLessBtn && wrapper && details) {
+            // Show More
+            showMoreBtn.addEventListener('click', () => {
+                wrapper.classList.remove('grid-rows-[0fr]');
+                wrapper.classList.add('grid-rows-[1fr]');
+                details.classList.remove('opacity-0');
+
+                // Hide show more button
+                showMoreBtn.classList.add('hidden');
+            });
+
+            // Show Less
+            showLessBtn.addEventListener('click', () => {
+                wrapper.classList.remove('grid-rows-[1fr]');
+                wrapper.classList.add('grid-rows-[0fr]');
+                details.classList.add('opacity-0');
+
+                // Show show more button again
+                showMoreBtn.classList.remove('hidden');
+
+                // Optional: Scroll back to top button if needed
+                // showMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         }
-
         // Carousel Infinite Scroll Setup
         const track = document.getElementById('collaborators-track');
         if (track) {

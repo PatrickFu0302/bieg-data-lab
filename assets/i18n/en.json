@@ -67,6 +67,8 @@
         "role": "Principal Investigator / Ph.D.",
         "bio": "Focusing on building energy simulation, AI data-driven analysis, and grid resilience. PhD from National University of Singapore, with industry experience at Centrica Energy (Europe). Dedicated to bridging academic theory and industry practice to promote net-zero buildings and smart grids.",
         "cv_btn": "Download CV",
+        "show_more": "Show Full Profile",
+        "show_less": "Show Less",
         "location": "Taipei / Singapore / Europe",
         "exp_global_title": "Global Net Zero Experience",
         "exp_global_desc": "PhD from NUS & R&D experience at Centrica (Europe). Participated in EU Dedalus, DigiRES projects.",

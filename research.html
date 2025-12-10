@@ -24,9 +24,9 @@
             margin: 0 auto;
         }
 
-        .hero-pattern {
-            background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.9)),
-                url('https://www.transparenttextures.com/patterns/cubes.png');
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -36,19 +36,18 @@
     <main>
 
         <!-- Hero Section -->
-        <section class="hero-pattern py-24 relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
-            </div>
+        <section class="page-hero-bg py-24 relative overflow-hidden">
             <div class="container-custom px-6 text-center relative z-10">
-                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-                    <i data-lucide="flask-conical" class="w-5 h-5 text-white"></i>
-                    <span class="text-white font-semibold" data-i18n="research.hero_badge">Research Projects</span>
+                <div
+                    class="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full mb-6 border border-white/50">
+                    <i data-lucide="flask-conical" class="w-5 h-5 text-blue-700"></i>
+                    <span class="text-blue-900 font-semibold" data-i18n="research.hero_badge">Research Projects</span>
                 </div>
-                <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-8 leading-tight"
+                <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-8 leading-tight"
                     data-i18n="research.hero_title">
                     研究方向與計畫
                 </h1>
-                <p class="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-12"
+                <p class="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed mb-12 font-medium"
                     data-i18n="research.hero_desc">
                     我們專注於建築能源模擬、數位雙生與電網韌性預測。透過數據驅動的方法，解決從單棟建築到城市電網尺度的能源挑戰。
                 </p>
@@ -59,7 +58,7 @@
                         <span data-i18n="research.btn_p1">Project 01: Ziving Lab</span>
                     </a>
                     <a href="#project2"
-                        class="btn btn-ghost text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
+                        class="btn btn-ghost bg-white/80 backdrop-blur-sm text-slate-800 border-white/50 hover:bg-white text-lg px-8 py-4 shadow-lg hover:shadow-xl">
                         <i data-lucide="zap" class="w-5 h-5"></i>
                         <span data-i18n="research.btn_p2">Project 02: 電網韌性預測</span>
                     </a>
