@@ -307,5 +307,93 @@
             // Duplicate content for seamless scrolling
             track.innerHTML += track.innerHTML;
         }
+
+        // Partners Carousel Logic
+        const partnersTrack = document.getElementById('partners-carousel-track');
+        const partnersPrev = document.getElementById('partners-prev');
+        const partnersNext = document.getElementById('partners-next');
+        const partnersDots = document.getElementById('partners-dots');
+
+        if (partnersTrack && partnersPrev && partnersNext && partnersDots) {
+            let currentIndex = 0;
+            const cards = partnersTrack.children;
+            const totalCards = cards.length;
+            let cardsPerView = window.innerWidth >= 768 ? 2 : 1;
+            let maxIndex = Math.ceil(totalCards / cardsPerView) - 1;
+            let autoPlayInterval;
+
+            // Initialize Dots
+            function initDots() {
+                partnersDots.innerHTML = '';
+                const numDots = Math.ceil(totalCards / cardsPerView);
+                for (let i = 0; i < numDots; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `w-2 h-2 rounded-full transition-all ${i === 0 ? 'bg-blue-600 w-6' : 'bg-slate-300 hover:bg-blue-400'}`;
+                    dot.addEventListener('click', () => goToSlide(i));
+                    partnersDots.appendChild(dot);
+                }
+            }
+
+            // Update Carousel Position
+            function updateCarousel() {
+                const percentage = -(currentIndex * 100);
+                partnersTrack.style.transform = `translateX(${percentage}%)`;
+
+                // Update Dots
+                const dots = partnersDots.children;
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].className = `w-2 h-2 rounded-full transition-all ${i === currentIndex ? 'bg-blue-600 w-6' : 'bg-slate-300 hover:bg-blue-400'}`;
+                }
+            }
+
+            // Go to specific slide
+            function goToSlide(index) {
+                currentIndex = index;
+                if (currentIndex < 0) currentIndex = maxIndex;
+                if (currentIndex > maxIndex) currentIndex = 0;
+                updateCarousel();
+                resetAutoPlay();
+            }
+
+            // Next Slide
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            // Prev Slide
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            // Auto Play
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, 5000);
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            // Event Listeners
+            partnersNext.addEventListener('click', nextSlide);
+            partnersPrev.addEventListener('click', prevSlide);
+
+            // Responsive Handling
+            window.addEventListener('resize', () => {
+                const newCardsPerView = window.innerWidth >= 768 ? 2 : 1;
+                if (newCardsPerView !== cardsPerView) {
+                    cardsPerView = newCardsPerView;
+                    maxIndex = Math.ceil(totalCards / cardsPerView) - 1;
+                    currentIndex = 0; // Reset to start to avoid layout issues
+                    initDots();
+                    updateCarousel();
+                }
+            });
+
+            // Initialize
+            initDots();
+            startAutoPlay();
+        }
     });
 })();
