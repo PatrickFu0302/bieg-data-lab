@@ -8,8 +8,6 @@
         { id: 'team', href: 'team.html', labelKey: 'team' },
         { id: 'research', href: 'research.html', labelKey: 'research' },
         { id: 'courses', href: 'courses.html', labelKey: 'courses' },
-        { id: 'international', href: 'international.html', labelKey: 'international' },
-        { id: 'pi', href: 'pi.html', labelKey: 'pi' },
         { id: 'publications', href: 'publications.html', labelKey: 'publications' }
     ];
 
