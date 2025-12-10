@@ -23,7 +23,6 @@
             margin: 0 auto;
         }
 
-        /* Course accordion or card styles can go here if needed */
         .course-schedule-table td,
         .course-schedule-table th {
             padding: 0.75rem 1rem;
@@ -45,8 +44,8 @@
         <!-- Page Header -->
         <section class="bg-white border-b border-slate-200">
             <div class="container-custom px-6 py-16 text-center">
-                <h1 class="text-4xl font-bold text-slate-900 mb-4">開設課程</h1>
-                <p class="text-xl text-slate-500 max-w-2xl mx-auto">
+                <h1 class="text-4xl font-bold text-slate-900 mb-4" data-i18n="courses.title">開設課程</h1>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto" data-i18n="courses.subtitle">
                     結合建築物理理論與資料科學實作，培養跨領域的淨零建築專業人才。
                 </p>
             </div>
@@ -60,20 +59,21 @@
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <span
-                                class="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold mb-3 tracking-wider">114-2
+                                class="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold mb-3 tracking-wider"
+                                data-i18n="courses.c1_subtitle">114-2
                                 學期</span>
-                            <h2 class="text-2xl md:text-3xl font-bold">淨零建築概論與模擬實作</h2>
+                            <h2 class="text-2xl md:text-3xl font-bold" data-i18n="courses.c1_title">淨零建築概論與模擬實作</h2>
                             <p class="text-blue-100 mt-2 text-lg">Introduction to Net Zero Buildings and Simulation
                                 Practice</p>
                         </div>
                         <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm min-w-[200px]">
                             <div class="flex items-center gap-3 mb-2">
                                 <i data-lucide="monitor-play" class="w-5 h-5"></i>
-                                <span class="font-medium">實作導向</span>
+                                <span class="font-medium" data-i18n="courses.c1_type">實作導向</span>
                             </div>
                             <div class="flex items-center gap-3 text-sm text-blue-100">
                                 <i data-lucide="cpu" class="w-4 h-4"></i>
-                                <span>EnergyPlus, SketchUp</span>
+                                <span data-i18n="courses.c1_tools">EnergyPlus, SketchUp</span>
                             </div>
                         </div>
                     </div>
@@ -85,9 +85,11 @@
                             <!-- Overview -->
                             <div>
                                 <h3 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
-                                    <i data-lucide="book-open" class="text-blue-600 w-5 h-5"></i> 課程概述
+                                    <i data-lucide="book-open" class="text-blue-600 w-5 h-5"></i> <span
+                                        data-i18n="courses.c1_overview_title">課程概述</span>
                                 </h3>
-                                <p class="text-slate-600 leading-relaxed text-justify">
+                                <p class="text-slate-600 leading-relaxed text-justify"
+                                    data-i18n="courses.c1_overview_desc">
                                     全球能源消耗的主要來源之一是來自建築部門，為追求全球淨零排放之目標，本課程針對建築的能源淨零概念進行探討並配合真實案例實作練習。課程將系統性地解構建築物理環境與機電設備系統，使學生具備分析建築耗能成因之核心能力。為了確保理論與實務的緊密連結，本課程將深入剖析真實世界的建築案例，並特別以大學校園建築作為核心實作場域。透過解構建築物理環境與機電設備系統，學生將學習運用建築性能模擬（Building
                                     Performance Simulation,
                                     BPS）軟體EnergyPlus進行定量分析。教學過程涵蓋數據蒐集、建模、與實際電表數據之校正，最終提出具成本效益的優化策略。
@@ -97,32 +99,33 @@
                             <!-- Objectives -->
                             <div>
                                 <h3 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
-                                    <i data-lucide="target" class="text-blue-600 w-5 h-5"></i> 課程目標
+                                    <i data-lucide="target" class="text-blue-600 w-5 h-5"></i> <span
+                                        data-i18n="courses.c1_obj_title">課程目標</span>
                                 </h3>
                                 <ul class="space-y-3">
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span
-                                            class="text-slate-600"><strong>建構核心知識：</strong>掌握建築物理環境（熱、光、空氣）與建築設備系統（HVAC、照明）之運作原理</span>
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c1_obj_1"><strong>建構核心知識：</strong>掌握建築物理環境（熱、光、空氣）與建築設備系統（HVAC、照明）之運作原理</span>
                                     </li>
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span
-                                            class="text-slate-600"><strong>掌握模擬工具：</strong>熟練操作建築性能模擬軟體，包含幾何建模、參數設定與模擬執行</span>
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c1_obj_2"><strong>掌握模擬工具：</strong>熟練操作建築性能模擬軟體，包含幾何建模、參數設定與模擬執行</span>
                                     </li>
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span
-                                            class="text-slate-600"><strong>執行實務調查：</strong>針對台大校園建築進行實地測量，蒐集物理尺寸、外殼參數及設備規格以建立模型</span>
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c1_obj_3"><strong>執行實務調查：</strong>針對台大校園建築進行實地測量，蒐集物理尺寸、外殼參數及設備規格以建立模型</span>
                                     </li>
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span
-                                            class="text-slate-600"><strong>數據分析與校正：</strong>運用統計方法比對模擬結果與實際電表數據，進行模型參數校正</span>
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c1_obj_4"><strong>數據分析與校正：</strong>運用統計方法比對模擬結果與實際電表數據，進行模型參數校正</span>
                                     </li>
                                 </ul>
                             </div>
@@ -130,95 +133,99 @@
                             <!-- Schedule -->
                             <div>
                                 <h3 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
-                                    <i data-lucide="calendar-days" class="text-blue-600 w-5 h-5"></i> 課程進度
+                                    <i data-lucide="calendar-days" class="text-blue-600 w-5 h-5"></i> <span
+                                        data-i18n="courses.c1_sched_title">課程進度</span>
                                 </h3>
                                 <div class="overflow-x-auto border border-slate-200 rounded-lg">
                                     <table class="w-full text-sm text-left course-schedule-table">
                                         <thead
                                             class="bg-slate-50 text-slate-500 font-semibold uppercase tracking-wider">
                                             <tr>
-                                                <th class="w-20">週次</th>
-                                                <th>單元主題</th>
+                                                <th class="w-20">Week</th>
+                                                <th>Topic</th>
                                             </tr>
                                         </thead>
                                         <tbody class="divide-y divide-slate-100">
                                             <tr class="bg-slate-50/50">
-                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4">
+                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4"
+                                                    data-i18n="courses.phase_1">
                                                     第一階段：建築物理與淨零基礎</td>
                                             </tr>
                                             <tr>
                                                 <td>1</td>
-                                                <td>課程導論與淨零趨勢：2050 淨零路徑、建築能源系統概論</td>
+                                                <td data-i18n="courses.c1_w1">課程導論與淨零趨勢：2050 淨零路徑、建築能源系統概論</td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
-                                                <td>建築物理基礎 (I) 熱與外殼：熱傳遞原理、外殼熱傳透率</td>
+                                                <td data-i18n="courses.c1_w2">建築物理基礎 (I) 熱與外殼：熱傳遞原理、外殼熱傳透率</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
-                                                <td>建築物理基礎 (II) 氣候與環境：氣象資料意義與被動式設計策略</td>
+                                                <td data-i18n="courses.c1_w3">建築物理基礎 (II) 氣候與環境：氣象資料意義與被動式設計策略</td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
-                                                <td>建築設備系統概論：空調與照明系統原理、控制策略</td>
+                                                <td data-i18n="courses.c1_w4">建築設備系統概論：空調與照明系統原理、控制策略</td>
                                             </tr>
 
                                             <tr class="bg-slate-50/50">
-                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4">
+                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4"
+                                                    data-i18n="courses.phase_2">
                                                     第二階段：EnergyPlus模擬軟體操作</td>
                                             </tr>
                                             <tr>
                                                 <td>5</td>
-                                                <td>模擬軟體介面與幾何建模</td>
+                                                <td data-i18n="courses.c1_w5">模擬軟體介面與幾何建模</td>
                                             </tr>
                                             <tr>
                                                 <td>6</td>
-                                                <td>參數設定 (內負荷與排程)：人員設備功率密度</td>
+                                                <td data-i18n="courses.c1_w6">參數設定 (內負荷與排程)：人員設備功率密度</td>
                                             </tr>
                                             <tr>
                                                 <td>7</td>
-                                                <td>參數設定 (空調與外殼)：建構材質庫及設定點</td>
+                                                <td data-i18n="courses.c1_w7">參數設定 (空調與外殼)：建構材質庫及設定點</td>
                                             </tr>
                                             <tr>
                                                 <td>8</td>
-                                                <td>數據分析基礎與 CSV 處理：能源數據清洗技巧</td>
+                                                <td data-i18n="courses.c1_w8">數據分析基礎與 CSV 處理：能源數據清洗技巧</td>
                                             </tr>
                                             <tr>
                                                 <td>9</td>
-                                                <td>期中評量 / 模擬實作檢核</td>
+                                                <td data-i18n="courses.c1_w9">期中評量 / 模擬實作檢核</td>
                                             </tr>
 
                                             <tr class="bg-slate-50/50">
-                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4">第三階段：校園案例實作
+                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4"
+                                                    data-i18n="courses.phase_3">第三階段：校園案例實作
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>10</td>
-                                                <td>現地調查：分組收集尺寸、記錄設備規格</td>
+                                                <td data-i18n="courses.c1_w10">現地調查：分組收集尺寸、記錄設備規格</td>
                                             </tr>
                                             <tr>
                                                 <td>11</td>
-                                                <td>現況建模：建立反映現況的建築能源模型</td>
+                                                <td data-i18n="courses.c1_w11">現況建模：建立反映現況的建築能源模型</td>
                                             </tr>
                                             <tr>
                                                 <td>12</td>
-                                                <td>模型校正 (I) 方法論：ASHRAE標準及誤差指標</td>
+                                                <td data-i18n="courses.c1_w12">模型校正 (I) 方法論：ASHRAE標準及誤差指標</td>
                                             </tr>
                                             <tr>
                                                 <td>13</td>
-                                                <td>模型校正 (II) 參數調校實務：微調參數以縮小模擬誤差</td>
+                                                <td data-i18n="courses.c1_w13">模型校正 (II) 參數調校實務：微調參數以縮小模擬誤差</td>
                                             </tr>
                                             <tr>
                                                 <td>14</td>
-                                                <td>節能策略擬定與成本效益</td>
+                                                <td data-i18n="courses.c1_w14">節能策略擬定與成本效益</td>
                                             </tr>
                                             <tr>
                                                 <td>15</td>
-                                                <td>期末專題諮詢與工作坊</td>
+                                                <td data-i18n="courses.c1_w15">期末專題諮詢與工作坊</td>
                                             </tr>
                                             <tr>
                                                 <td>16</td>
-                                                <td>期末專題成果發表</td>
+                                                <td data-i18n="courses.c1_w16">期末專題成果發表</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -229,11 +236,12 @@
                         <!-- Sidebar info -->
                         <div class="space-y-8">
                             <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                <h4 class="font-bold text-slate-800 mb-4">評量方式</h4>
+                                <h4 class="font-bold text-slate-800 mb-4" data-i18n="courses.assessment_title">評量方式</h4>
                                 <div class="space-y-4">
                                     <div>
                                         <div class="flex justify-between text-sm mb-1">
-                                            <span class="text-slate-600">作業/考試</span>
+                                            <span class="text-slate-600"
+                                                data-i18n="courses.assessment_homework">作業/考試</span>
                                             <span class="font-bold text-slate-900">70%</span>
                                         </div>
                                         <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
@@ -242,7 +250,8 @@
                                     </div>
                                     <div>
                                         <div class="flex justify-between text-sm mb-1">
-                                            <span class="text-slate-600">期末專題</span>
+                                            <span class="text-slate-600"
+                                                data-i18n="courses.assessment_project">期末專題</span>
                                             <span class="font-bold text-slate-900">30%</span>
                                         </div>
                                         <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
@@ -254,9 +263,10 @@
 
                             <div class="bg-amber-50 p-6 rounded-xl border border-amber-100">
                                 <h4 class="font-bold text-amber-800 mb-2 flex items-center gap-2">
-                                    <i data-lucide="alert-circle" class="w-4 h-4"></i> 先修建議
+                                    <i data-lucide="alert-circle" class="w-4 h-4"></i> <span
+                                        data-i18n="courses.prereq_title">先修建議</span>
                                 </h4>
-                                <p class="text-sm text-amber-700">
+                                <p class="text-sm text-amber-700" data-i18n="courses.prereq_desc">
                                     建議具備基礎資料分析能力（如 Excel 操作或 Python 基礎）。課程中將涉及處理時間序列之能耗數據。
                                 </p>
                             </div>
@@ -272,19 +282,20 @@
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <span
-                                class="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold mb-3 tracking-wider">114-2
+                                class="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-bold mb-3 tracking-wider"
+                                data-i18n="courses.c2_subtitle">114-2
                                 學期</span>
-                            <h2 class="text-2xl md:text-3xl font-bold">環境與能源的資料科學</h2>
+                            <h2 class="text-2xl md:text-3xl font-bold" data-i18n="courses.c2_title">環境與能源的資料科學</h2>
                             <p class="text-emerald-100 mt-2 text-lg">Data Science for Environment and Energy</p>
                         </div>
                         <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm min-w-[200px]">
                             <div class="flex items-center gap-3 mb-2">
                                 <i data-lucide="code-2" class="w-5 h-5"></i>
-                                <span class="font-medium">程式實作</span>
+                                <span class="font-medium" data-i18n="courses.c2_type">程式實作</span>
                             </div>
                             <div class="flex items-center gap-3 text-sm text-emerald-100">
                                 <i data-lucide="terminal" class="w-4 h-4"></i>
-                                <span>Python, Pandas, Scikit-learn</span>
+                                <span data-i18n="courses.c2_tools">Python, Pandas, Scikit-learn</span>
                             </div>
                         </div>
                     </div>
@@ -296,9 +307,11 @@
                             <!-- Overview -->
                             <div>
                                 <h3 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
-                                    <i data-lucide="book-open" class="text-emerald-600 w-5 h-5"></i> 課程概述
+                                    <i data-lucide="book-open" class="text-emerald-600 w-5 h-5"></i> <span
+                                        data-i18n="courses.c2_overview_title">課程概述</span>
                                 </h3>
-                                <p class="text-slate-600 leading-relaxed text-justify">
+                                <p class="text-slate-600 leading-relaxed text-justify"
+                                    data-i18n="courses.c2_overview_desc">
                                     隨著物聯網與大數據技術的成熟，數據驅動的決策在環境永續與能源管理中扮演關鍵角色。本課程目標為建立學生的資料科學基礎，並深入探討其於環境監測與能源系統之應用。課程將系統性地教授
                                     Python 程式設計，利用 Colaboratory Jupyter Notebooks
                                     建構互動式協作環境。本課程將深入剖析真實世界的場域案例，透過解讀校園內長期累積的智慧電表數據與室內環境感測數據（如 CO2
@@ -309,32 +322,35 @@
                             <!-- Objectives -->
                             <div>
                                 <h3 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
-                                    <i data-lucide="target" class="text-emerald-600 w-5 h-5"></i> 課程目標
+                                    <i data-lucide="target" class="text-emerald-600 w-5 h-5"></i> <span
+                                        data-i18n="courses.c2_obj_title">課程目標</span>
                                 </h3>
                                 <ul class="space-y-3">
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>掌握數據處理技術：</strong>熟練運用 Python
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c2_obj_1"><strong>掌握數據處理技術：</strong>熟練運用 Python
                                             進行環境與能源數據的清洗、轉換與異常值處理</span>
                                     </li>
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>精通分析與視覺化：</strong>運用 Pandas 與
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c2_obj_2"><strong>精通分析與視覺化：</strong>運用 Pandas 與
                                             Matplotlib/Seaborn 進行探索性資料分析（EDA），解讀並呈現趨勢</span>
                                     </li>
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span
-                                            class="text-slate-600"><strong>建構預測模型：</strong>建立能源消耗迴歸預測或分群模型，並能執行嚴謹與驗證</span>
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c2_obj_3"><strong>建構預測模型：</strong>建立能源消耗迴歸預測或分群模型，並能執行嚴謹與驗證</span>
                                     </li>
                                     <li class="flex gap-3">
                                         <i data-lucide="check-circle-2"
                                             class="w-5 h-5 text-teal-500 shrink-0 mt-0.5"></i>
-                                        <span
-                                            class="text-slate-600"><strong>解決實務問題：</strong>應用於校園案例，評估建築使用率對能耗與環境品質的影響</span>
+                                        <span class="text-slate-600"
+                                            data-i18n="courses.c2_obj_4"><strong>解決實務問題：</strong>應用於校園案例，評估建築使用率對能耗與環境品質的影響</span>
                                     </li>
                                 </ul>
                             </div>
@@ -342,125 +358,102 @@
                             <!-- Schedule -->
                             <div>
                                 <h3 class="flex items-center gap-2 text-lg font-bold text-slate-900 mb-4">
-                                    <i data-lucide="calendar-days" class="text-emerald-600 w-5 h-5"></i> 課程進度
+                                    <i data-lucide="calendar-days" class="text-emerald-600 w-5 h-5"></i> <span
+                                        data-i18n="courses.c2_sched_title">課程進度</span>
                                 </h3>
                                 <div class="overflow-x-auto border border-slate-200 rounded-lg">
                                     <table class="w-full text-sm text-left course-schedule-table">
                                         <thead
                                             class="bg-slate-50 text-slate-500 font-semibold uppercase tracking-wider">
                                             <tr>
-                                                <th class="w-20">週次</th>
-                                                <th>單元主題</th>
+                                                <th class="w-20">Week</th>
+                                                <th>Topic</th>
                                             </tr>
                                         </thead>
                                         <tbody class="divide-y divide-slate-100">
                                             <tr class="bg-slate-50/50">
-                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4">
+                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4"
+                                                    data-i18n="courses.c2_phase_1">
                                                     第一階段：數據科學基礎與工具</td>
                                             </tr>
                                             <tr>
                                                 <td>1</td>
-                                                <td>課程導論與環境數據科學概論</td>
+                                                <td data-i18n="courses.c2_w1">課程導論與環境數據科學概論</td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
-                                                <td>Python 數據科學工具箱 (I)：NumPy 與科學運算核心</td>
+                                                <td data-i18n="courses.c2_w2">Python 數據科學工具箱 (I)：NumPy 與科學運算核心</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
-                                                <td>Python 數據科學工具箱 (II)：Pandas 資料結構與操作</td>
+                                                <td data-i18n="courses.c2_w3">Python 數據科學工具箱 (II)：Pandas 資料結構與操作</td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
-                                                <td>數據收集與來源：IoT 感測器、智慧電表與氣象數據</td>
+                                                <td data-i18n="courses.c2_w4">數據收集與來源：IoT 感測器、智慧電表與氣象數據</td>
                                             </tr>
 
                                             <tr class="bg-slate-50/50">
-                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4">
+                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4"
+                                                    data-i18n="courses.c2_phase_2">
                                                     第二階段：數據預處理與視覺化</td>
                                             </tr>
                                             <tr>
                                                 <td>5</td>
-                                                <td>數據預處理技術 (I)：格式轉換與時間序列處理</td>
+                                                <td data-i18n="courses.c2_w5">數據預處理技術 (I)：格式轉換與時間序列處理</td>
                                             </tr>
                                             <tr>
                                                 <td>6</td>
-                                                <td>數據預處理技術 (II)：缺失值填補與異常值偵測</td>
+                                                <td data-i18n="courses.c2_w6">數據預處理技術 (II)：缺失值填補與異常值偵測</td>
                                             </tr>
                                             <tr>
                                                 <td>7</td>
-                                                <td>探索性數據分析 (EDA)：統計描述與分佈分析</td>
+                                                <td data-i18n="courses.c2_w7">探索性數據分析 (EDA)：統計描述與分佈分析</td>
                                             </tr>
                                             <tr>
                                                 <td>8</td>
-                                                <td>數據視覺化技術：Matplotlib/Seaborn 與多變量呈現</td>
+                                                <td data-i18n="courses.c2_w8">數據視覺化技術：Matplotlib/Seaborn 與多變量呈現</td>
                                             </tr>
                                             <tr>
                                                 <td>9</td>
-                                                <td>期中評量 / 案例實作檢核</td>
+                                                <td data-i18n="courses.c2_w9">期中評量 / 案例實作檢核</td>
                                             </tr>
 
                                             <tr class="bg-slate-50/50">
-                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4">
+                                                <td colspan="2" class="font-bold text-slate-700 py-2 px-4"
+                                                    data-i18n="courses.c2_phase_3">
                                                     第三階段：建模分析與校園案例實作</td>
                                             </tr>
                                             <tr>
                                                 <td>10</td>
-                                                <td>機器學習基礎：Scikit-learn 與監督/非監督式學習</td>
+                                                <td data-i18n="courses.c2_w10">機器學習基礎：Scikit-learn 與監督/非監督式學習</td>
                                             </tr>
                                             <tr>
                                                 <td>11</td>
-                                                <td>預測模型建立：開發建築能耗預測模型</td>
+                                                <td data-i18n="courses.c2_w11">預測模型建立：開發建築能耗預測模型</td>
                                             </tr>
                                             <tr>
                                                 <td>12</td>
-                                                <td>模型驗證與評估：交叉驗證及評估指標</td>
+                                                <td data-i18n="courses.c2_w12">模型驗證與評估：交叉驗證及評估指標</td>
                                             </tr>
                                             <tr>
                                                 <td>13</td>
-                                                <td>互動式儀表板開發：Streamlit 框架應用</td>
+                                                <td data-i18n="courses.c2_w13">互動式儀表板開發：Streamlit 框架應用</td>
                                             </tr>
                                             <tr>
                                                 <td>14</td>
-                                                <td>校園案例研究：分析環境與能源數據</td>
+                                                <td data-i18n="courses.c2_w14">校園案例研究：分析環境與能源數據</td>
                                             </tr>
                                             <tr>
                                                 <td>15</td>
-                                                <td>期末專題諮詢與工作坊</td>
+                                                <td data-i18n="courses.c2_w15">期末專題諮詢與工作坊</td>
                                             </tr>
                                             <tr>
                                                 <td>16</td>
-                                                <td>期末專題成果發表</td>
+                                                <td data-i18n="courses.c2_w16">期末專題成果發表</td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Sidebar info -->
-                        <div class="space-y-8">
-                            <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                                <h4 class="font-bold text-slate-800 mb-4">評量方式</h4>
-                                <div class="space-y-4">
-                                    <div>
-                                        <div class="flex justify-between text-sm mb-1">
-                                            <span class="text-slate-600">作業/考試</span>
-                                            <span class="font-bold text-slate-900">70%</span>
-                                        </div>
-                                        <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
-                                            <div class="h-full bg-emerald-500 w-[70%]"></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="flex justify-between text-sm mb-1">
-                                            <span class="text-slate-600">期末專題</span>
-                                            <span class="font-bold text-slate-900">30%</span>
-                                        </div>
-                                        <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
-                                            <div class="h-full bg-teal-500 w-[30%]"></div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
