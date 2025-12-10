@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國際合作 - BIEG Data Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        }
+
+        .container-custom {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="text-slate-700 antialiased bg-slate-50">
+
+    <div data-site-nav data-active-page="international"></div>
+
+    <main class="pb-24">
+
+        <!-- Page Header -->
+        <section class="bg-slate-900 text-white py-20 relative overflow-hidden">
+            <!-- Decorative background elements -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="absolute right-0 top-0 w-96 h-96 bg-blue-500 rounded-full blur-[100px]"></div>
+                <div class="absolute left-0 bottom-0 w-64 h-64 bg-teal-500 rounded-full blur-[80px]"></div>
+            </div>
+
+            <div class="container-custom px-6 relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">國際合作網絡</h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                    我們與歐美及亞洲頂尖學術機構、能源企業保持緊密合作，為學生提供國際交流機會與世界級的研究視野。
+                </p>
+            </div>
+        </section>
+
+        <!-- Partners Grid -->
+        <section class="container-custom px-6 mt-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- NUS -->
+                <div
+                    class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 hover:-translate-y-1 transition-transform group">
+                    <div
+                        class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="school" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">新加坡國立大學</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">National University of
+                        Singapore</p>
+                    <p class="text-slate-600 text-sm leading-6">
+                        與建築環境系及 IDSB 研究中心長期合作，專注於熱帶地區建築節能與智慧城市應用。
+                    </p>
+                </div>
+
+                <!-- KU Leuven -->
+                <div
+                    class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 hover:-translate-y-1 transition-transform group">
+                    <div
+                        class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="landmark" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">魯汶大學</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">KU Leuven (Belgium)</p>
+                    <p class="text-slate-600 text-sm leading-6">
+                        與電機系 ELECTA 實驗室合作，研究需量反應與電網韌性，並參與歐盟地平線計畫。
+                    </p>
+                </div>
+
+                <!-- Centrica -->
+                <div
+                    class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 hover:-translate-y-1 transition-transform group">
+                    <div
+                        class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center text-cyan-600 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Centrica Energy</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">United Kingdom / Belgium
+                    </p>
+                    <p class="text-slate-600 text-sm leading-6">
+                        跨國能源服務與解決方案公司。合作開發虛擬電廠 (VPP) 技術與能源市場交易策略。
+                    </p>
+                </div>
+
+                <!-- ETH Zurich -->
+                <div
+                    class="bg-white rounded-xl shadow-lg border border-slate-100 p-8 hover:-translate-y-1 transition-transform group">
+                    <div
+                        class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-red-600 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="mountain" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">蘇黎世聯邦理工學院</h3>
+                    <p class="text-sm text-slate-500 mb-4 font-medium uppercase tracking-wide">ETH Zürich (Switzerland)
+                    </p>
+                    <p class="text-slate-600 text-sm leading-6">
+                        學術交流與共同發表，探討建築數位分身 (Digital Twins) 與生成式 AI 在建築設計之應用。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Map Section (Visual Representation) -->
+        <section class="container-custom px-6 mt-16 mb-16">
+            <div class="bg-slate-900 rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden">
+                <h2 class="text-2xl font-bold mb-4 relative z-10">全球足跡</h2>
+                <p class="text-slate-400 mb-8 relative z-10">連結亞洲與歐洲的淨零建築研究網絡</p>
+
+                <!-- Simple CSS representation of locations -->
+                <div
+                    class="relative h-64 w-full max-w-2xl mx-auto bg-slate-800/50 rounded-xl border border-slate-700 flex items-center justify-center">
+                    <p class="text-slate-500 text-sm">
+                        <i data-lucide="globe" class="w-16 h-16 opacity-20 mb-2 mx-auto"></i>
+                        <br>
+                        Taipei • Singapore • Brussels • Zurich • Leuven
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div data-site-footer></div>
+    <script src="assets/site.js"></script>
+
+</body>
+
+</html>

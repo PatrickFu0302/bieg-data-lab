@@ -4,7 +4,10 @@
     // Navigation links configuration
     const links = [
         { id: 'home', href: 'index.html', label: '首頁' },
+        { id: 'team', href: 'team.html', label: '研究團隊' },
         { id: 'research', href: 'research.html', label: '研究計畫' },
+        { id: 'courses', href: 'courses.html', label: '開設課程' },
+        { id: 'international', href: 'international.html', label: '國際合作' },
         { id: 'pi', href: 'pi.html', label: '主持人' },
         { id: 'publications', href: 'publications.html', label: '論文發表' }
     ];

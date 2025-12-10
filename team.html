@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究團隊 - BIEG Data Lab</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+        }
+
+        .container-custom {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="text-slate-700 antialiased bg-slate-50">
+
+    <div data-site-nav data-active-page="team"></div>
+
+    <main class="pb-24">
+
+        <!-- Page Header -->
+        <section class="bg-white border-b border-slate-200">
+            <div class="container-custom px-6 py-16 text-center">
+                <h1 class="text-4xl font-bold text-slate-900 mb-4">研究團隊</h1>
+                <p class="text-xl text-slate-500 max-w-2xl mx-auto">
+                    我們是致力於結合建築物理與資料科學的跨領域團隊，成員來自不同背景，共同探索淨零建築的無限可能。
+                </p>
+            </div>
+        </section>
+
+        <!-- PI Section -->
+        <section class="container-custom px-6 mt-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">主持人 (Principal
+                Investigator)</h2>
+            <div
+                class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-64 bg-slate-100 flex items-center justify-center p-6">
+                        <!-- Using the same layout style as pi.html but simplified -->
+                        <div class="w-40 h-40 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow">
+                            <img src="Chun-Fu-A.jpg" alt="傅群 (Chun Fu)" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-slate-900">傅 群 (Chun Fu), Ph.D.</h3>
+                                <p class="text-blue-600 font-medium">Assistant Professor</p>
+                            </div>
+                            <a href="pi.html"
+                                class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition-colors font-medium text-sm">
+                                <span>詳細介紹</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            專注於建築能源模擬、AI 數據驅動分析與電網韌性研究。擁有新加坡國立大學博士學位，
+                            致力於推動智慧建築與淨零排放的技術落地。
+                        </p>
+                        <div class="flex gap-3">
+                            <a href="mailto:chunfu@u.nus.edu"
+                                class="text-slate-400 hover:text-blue-600 transition-colors">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/chun-fu" target="_blank"
+                                class="text-slate-400 hover:text-[#0077b5] transition-colors">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Members -->
+        <section class="container-custom px-6 mt-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-teal-500 pl-4">實驗室成員 (Members)</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Placeholder for future students -->
+                <div
+                    class="bg-white p-8 rounded-xl border border-dashed border-slate-300 flex flex-col items-center justify-center text-center h-64">
+                    <div
+                        class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-300 mb-4">
+                        <i data-lucide="user-plus" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-600 mb-2">博士生 / 碩士生招募中</h3>
+                    <p class="text-slate-500 text-sm mb-4">歡迎對建築節能、資料科學有熱忱的同學加入</p>
+                    <a href="join.html" class="text-blue-600 font-medium text-sm hover:underline">如何申請 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alumni -->
+        <section class="container-custom px-6 mt-16 mb-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-slate-400 pl-4">畢業校友 (Alumni)</h2>
+            <p class="text-slate-500 italic">目前尚無畢業校友。</p>
+        </section>
+
+    </main>
+
+    <div data-site-footer></div>
+    <script src="assets/site.js"></script>
+
+</body>
+
+</html>
