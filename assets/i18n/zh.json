@@ -11,8 +11,10 @@
     },
     "home": {
         "hero_badge": "Building Intelligence & Energy Grid",
-        "hero_title": "BIEG Data Lab",
-        "hero_subtitle": "建築能網數據實驗室，聚焦智慧建築與電網資料的建模、預測與優化，串聯城市到社區的能源決策。",
+        "hero_title": "數據驅動 <span class=\"text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-teal-600\">淨零建築</span> <br> 與韌性電網",
+        "hero_desc": "BIEG Data Lab 致力於運用 AI 與數位雙生技術，解決城市能源轉型挑戰。從單棟建築節能到區域電網協調，我們提供全尺度的智慧解決方案。",
+        "hero_btn_research": "探索研究方向",
+        "hero_btn_team": "認識團隊",
         "cta_research": "查看研究",
         "cta_join": "加入團隊",
         "highlights_title": "實驗室亮點",

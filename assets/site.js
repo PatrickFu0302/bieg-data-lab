@@ -78,9 +78,9 @@
                     // If it contains an icon, we might overwrite it.
                     // Strategy: only translated text should be inside the data-i18n element.
                     // If an element has an icon, the text should be wrapped in a span with data-i18n
-                    el.textContent = text;
+                    el.innerHTML = text;
                 } else {
-                    el.textContent = text;
+                    el.innerHTML = text;
                 }
             });
 
