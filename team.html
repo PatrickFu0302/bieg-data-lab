@@ -22,6 +22,10 @@
             max-width: 1100px;
             margin: 0 auto;
         }
+
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 
@@ -32,82 +36,293 @@
     <main class="pb-24">
 
         <!-- Page Header -->
-        <section class="bg-white border-b border-slate-200">
-            <div class="container-custom px-6 py-16 text-center">
-                <h1 class="text-4xl font-bold text-slate-900 mb-4">研究團隊</h1>
-                <p class="text-xl text-slate-500 max-w-2xl mx-auto">
-                    我們是致力於結合建築物理與資料科學的跨領域團隊，成員來自不同背景，共同探索淨零建築的無限可能。
+        <section class="bg-slate-900 text-white py-20 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="absolute right-0 top-0 w-96 h-96 bg-blue-500 rounded-full blur-[100px]"></div>
+                <div class="absolute left-0 bottom-0 w-64 h-64 bg-teal-500 rounded-full blur-[80px]"></div>
+            </div>
+
+            <div class="container-custom px-6 relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">研究團隊</h1>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                    我們是一群充滿熱忱的研究者，致力於探索生物與環境的互動關係。
                 </p>
             </div>
         </section>
 
-        <!-- PI Section -->
+        <!-- Principal Investigator -->
         <section class="container-custom px-6 mt-16">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">主持人 (Principal
-                Investigator)</h2>
-            <div
-                class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow">
-                <div class="flex flex-col md:flex-row">
-                    <div class="w-full md:w-64 bg-slate-100 flex items-center justify-center p-6">
-                        <!-- Using the same layout style as pi.html but simplified -->
-                        <div class="w-40 h-40 rounded-full bg-slate-200 overflow-hidden border-4 border-white shadow">
-                            <img src="Chun-Fu-A.jpg" alt="傅群 (Chun Fu)" class="w-full h-full object-cover">
-                        </div>
+            <div class="mb-12 border-b border-slate-200 pb-4">
+                <h2 class="text-3xl font-bold text-slate-800">Principal Investigator</h2>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 h-64 md:h-auto relative bg-slate-200">
+                    <img src="assets/images/pi_photo.jpg" alt="Dr. Syuan-Jyun Sun"
+                        class="w-full h-full object-cover absolute inset-0">
+                    <div class="absolute inset-0 flex items-center justify-center text-slate-400">
+                        <!-- Fallback if no image -->
+                        <i data-lucide="user" class="w-16 h-16 opacity-50"></i>
                     </div>
-                    <div class="p-8 flex-1">
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                            <div>
-                                <h3 class="text-2xl font-bold text-slate-900">傅 群 (Chun Fu), Ph.D.</h3>
-                                <p class="text-blue-600 font-medium">Assistant Professor</p>
-                            </div>
-                            <a href="pi.html"
-                                class="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-700 rounded-lg hover:bg-slate-200 transition-colors font-medium text-sm">
-                                <span>詳細介紹</span>
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                        <p class="text-slate-600 leading-relaxed mb-6">
-                            專注於建築能源模擬、AI 數據驅動分析與電網韌性研究。擁有新加坡國立大學博士學位，
-                            致力於推動智慧建築與淨零排放的技術落地。
-                        </p>
-                        <div class="flex gap-3">
-                            <a href="mailto:chunfu@u.nus.edu"
-                                class="text-slate-400 hover:text-blue-600 transition-colors">
-                                <i data-lucide="mail" class="w-5 h-5"></i>
-                            </a>
-                            <a href="https://linkedin.com/in/chun-fu" target="_blank"
-                                class="text-slate-400 hover:text-[#0077b5] transition-colors">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
-                        </div>
+                </div>
+                <div class="p-8 md:p-12 md:w-2/3 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold">PI</span>
                     </div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-2">Dr. Syuan-Jyun Sun (孫烜駿)</h3>
+                    <p class="text-lg text-slate-600 mb-6 font-medium">Behavioural Ecologist</p>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        I’m a behavioural ecologist, broadly interested in how biodiversity arises and persists in a
+                        rapidly changing world. Particularly, I am interested in the biotic responses to environmental
+                        changes and the importance of biodiversity to ecosystem functioning.
+                    </p>
+                    <a href="pi.html"
+                        class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 group">
+                        View Full Profile
+                        <i data-lucide="arrow-right"
+                            class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Current Members -->
-        <section class="container-custom px-6 mt-16">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-teal-500 pl-4">實驗室成員 (Members)</h2>
+        <!-- Postdocs -->
+        <section class="container-custom px-6 mt-20">
+            <div class="mb-8 border-b border-slate-200 pb-4">
+                <h2 class="text-2xl font-bold text-slate-800">Postdoctoral Researchers</h2>
+            </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Placeholder for future students -->
+                <!-- Tanzil Malik -->
                 <div
-                    class="bg-white p-8 rounded-xl border border-dashed border-slate-300 flex flex-col items-center justify-center text-center h-64">
+                    class="bg-white rounded-xl shadow border border-slate-100 p-6 flex flex-col md:flex-row gap-6 member-card transition-all duration-300">
                     <div
-                        class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center text-slate-300 mb-4">
-                        <i data-lucide="user-plus" class="w-8 h-8"></i>
+                        class="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-slate-100 rounded-full overflow-hidden mx-auto md:mx-0">
+                        <img src="assets/images/team/img1.jpg" alt="Tanzil Malik" class="w-full h-full object-cover">
                     </div>
-                    <h3 class="text-lg font-bold text-slate-600 mb-2">博士生 / 碩士生招募中</h3>
-                    <p class="text-slate-500 text-sm mb-4">歡迎對建築節能、資料科學有熱忱的同學加入</p>
-                    <a href="join.html" class="text-blue-600 font-medium text-sm hover:underline">如何申請 &rarr;</a>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Tanzil Malik</h3>
+                        <div class="text-slate-500 text-sm mb-3 break-all">tanzilasi89@gmail.com</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Background in environmental science and ecology. Research interests include volatile organic
+                            compounds, chemical ecology, and the impact of environmental factors on biodiversity.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mariana Gabrielle Cangco Reyes -->
+                <div
+                    class="bg-white rounded-xl shadow border border-slate-100 p-6 flex flex-col md:flex-row gap-6 member-card transition-all duration-300">
+                    <div
+                        class="w-24 h-24 md:w-32 md:h-32 shrink-0 bg-slate-100 rounded-full overflow-hidden mx-auto md:mx-0">
+                        <i data-lucide="user" class="w-full h-full p-6 text-slate-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-1">Mariana Gabrielle Cangco Reyes</h3>
+                        <div class="text-slate-500 text-sm mb-3 break-all">reyesmariana141@gmail.com</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Interests include ecological restoration and nature-based solutions. Enjoys scuba diving,
+                            going to museums, and chilling on the beach.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Alumni -->
-        <section class="container-custom px-6 mt-16 mb-16">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8 border-l-4 border-slate-400 pl-4">畢業校友 (Alumni)</h2>
-            <p class="text-slate-500 italic">目前尚無畢業校友。</p>
+        <!-- Research Assistants -->
+        <section class="container-custom px-6 mt-20">
+            <div class="mb-8 border-b border-slate-200 pb-4">
+                <h2 class="text-2xl font-bold text-slate-800">Research Assistants</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Jeff -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden mb-4">
+                        <img src="assets/images/team/jeff.jpg" alt="Jeff" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Jeff (蔡沐慈)</h3>
+                    <div class="text-slate-500 text-xs mb-3">r08632003@ntu.edu.tw</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Likes street dance, especially dancehall style. Outdoor activities including mountain climbing
+                        and hiking appeal to me a lot.
+                    </p>
+                </div>
+
+                <!-- Teddy -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden mb-4">
+                        <i data-lucide="user" class="w-full h-full p-4 text-slate-300"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Teddy (楊騰志)</h3>
+                    <div class="text-slate-500 text-xs mb-3">yangteddy667@gmail.com</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Likes painting and handicrafts, mainly digital painting. Enjoys outdoors and discovering various
+                        creatures.
+                    </p>
+                </div>
+
+                <!-- Jojo Wang -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden mb-4">
+                        <i data-lucide="user" class="w-full h-full p-4 text-slate-300"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Jojo Wang</h3>
+                    <div class="text-slate-500 text-xs mb-3">jocelynw@uchicago.edu</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Interested in how organisms respond to urbanization. Graduated from University of Chicago.
+                        Enjoys reading, board games, and exploring the city.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Masters Students -->
+        <section class="container-custom px-6 mt-20">
+            <div class="mb-8 border-b border-slate-200 pb-4">
+                <h2 class="text-2xl font-bold text-slate-800">Master's Students</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Yi-Ta Wu -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 flex flex-col sm:flex-row gap-5 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden shrink-0">
+                        <img src="assets/images/team/img2.jpg" alt="Yi-Ta Wu" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">Yi-Ta Wu (吳奕達)</h3>
+                        <div class="text-slate-500 text-xs mb-2">r13247004@ntu.edu.tw</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Passionate about behavioural ecology. Aims to understand how environmental change influences
+                            species interactions, specifically burying beetles and mites.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Yu-Shieng Huang -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 flex flex-col sm:flex-row gap-5 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden shrink-0">
+                        <i data-lucide="user" class="w-full h-full p-4 text-slate-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">Yu-Shieng Huang (黃榆翔)</h3>
+                        <div class="text-slate-500 text-xs mb-2">r13247011@ntu.edu.tw</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Student in IPCS. Research at Fushan Botanical Garden focuses on temperature effects on
+                            burying beetle reproductive behavior.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Christine Chao -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 flex flex-col sm:flex-row gap-5 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden shrink-0">
+                        <i data-lucide="user" class="w-full h-full p-4 text-slate-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">Christine Chao (趙慈萱)</h3>
+                        <div class="text-slate-500 text-xs mb-2">cixuan0521@gmail.com</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Focuses on the impact of urbanization on burying beetles. Likes crocheting and watching
+                            animation series.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- River Basham -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 flex flex-col sm:flex-row gap-5 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden shrink-0">
+                        <i data-lucide="user" class="w-full h-full p-4 text-slate-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">River Basham</h3>
+                        <div class="text-slate-500 text-xs mb-2">bashamriver@gmail.com</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Exploring potential benefits of the spherical shape adopted by burying beetles during
+                            carcass preparation. Enjoys cafe hopping, knitting and bouldering!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Ke-An Hung -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 flex flex-col sm:flex-row gap-5 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden shrink-0">
+                        <img src="assets/images/team/img3.jpg" alt="Ke-An Hung" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">Ke-An Hung (洪可安)</h3>
+                        <div class="text-slate-500 text-xs mb-2">angelaisgood100@gmail.com</div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Developing a method to analyze gut DNA from burying beetles to detect potential vertebrate
+                            species. Passionate about wildlife and nature.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Undergraduate Students -->
+        <section class="container-custom px-6 mt-20">
+            <div class="mb-8 border-b border-slate-200 pb-4">
+                <h2 class="text-2xl font-bold text-slate-800">Undergraduate Students</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Hsu Chen -->
+                <div
+                    class="bg-white rounded-xl shadow-sm border border-slate-100 p-6 member-card transition-all duration-300">
+                    <div class="w-20 h-20 bg-slate-100 rounded-full overflow-hidden mb-4">
+                        <i data-lucide="user" class="w-full h-full p-4 text-slate-300"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Hsu Chen (徐箴)</h3>
+                    <div class="text-slate-500 text-xs mb-3">41243218s@gapps.ntnu.edu.tw</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Research focuses on how temperature variation affects burying beetles. Enjoys surfskating and
+                        keeping reptiles.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Administration -->
+        <section class="container-custom px-6 mt-20">
+            <div class="mb-8 border-b border-slate-200 pb-4">
+                <h2 class="text-2xl font-bold text-slate-800">Administration Personnel</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Jingyun Huang -->
+                <div class="bg-slate-50 rounded-lg p-5 border border-slate-200">
+                    <h3 class="font-bold text-slate-900">Jingyun Huang (黃鏡芸)</h3>
+                    <p class="text-slate-500 text-sm">Center for Atmospheric Resource and Disaster Studies</p>
+                    <p class="text-slate-400 text-xs mt-1">jingyunhuang@ntu.edu.tw</p>
+                </div>
+
+                <!-- Ping Ku -->
+                <div class="bg-slate-50 rounded-lg p-5 border border-slate-200">
+                    <h3 class="font-bold text-slate-900">Ping Ku (顧萍)</h3>
+                    <p class="text-slate-500 text-sm">Center for Atmospheric Resource and Disaster Studies</p>
+                    <p class="text-slate-400 text-xs mt-1">pingku@ntu.edu.tw</p>
+                </div>
+
+                <!-- Megan Chang -->
+                <div class="bg-slate-50 rounded-lg p-5 border border-slate-200">
+                    <h3 class="font-bold text-slate-900">Megan Chang (張明陽)</h3>
+                    <p class="text-slate-500 text-sm">Lab Manager</p>
+                    <p class="text-slate-600 text-xs mt-2 text-sm">
+                        Research assistant at Dept of Entomology, NTU. Interested in marine wildlife and animal
+                        conservation.
+                    </p>
+                </div>
+            </div>
         </section>
 
     </main>
