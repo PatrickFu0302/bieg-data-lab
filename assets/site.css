@@ -553,7 +553,8 @@ img {
     .grid-three,
     .grid-four {
         grid-template-columns: 1fr;
-        gap: var(--space-md);
+        gap: var(--space-xl);
+        /* Increased breathing room for stacked cards */
     }
 
     /* Mobile Menu Button */
@@ -581,16 +582,20 @@ img {
     .mobile-menu {
         position: fixed;
         inset: 0;
-        /* top: 0, right: 0, bottom: 0, left: 0 */
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(255, 255, 255, 0.85);
+        /* More translucent for glass effect */
         z-index: 55;
-        padding: 80px var(--space-lg) var(--space-lg);
+        padding: 90px var(--space-lg) var(--space-lg);
+        /* More top padding for breathing room */
         display: flex;
         flex-direction: column;
         gap: var(--space-md);
         transform: translateX(100%);
-        transition: transform var(--transition-base);
-        backdrop-filter: blur(16px);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Smooth bezel curve */
+        backdrop-filter: blur(20px);
+        /* Stronger blur */
+        -webkit-backdrop-filter: blur(20px);
     }
 
     .mobile-menu.is-active {
@@ -599,18 +604,57 @@ img {
 
     /* Mobile Nav Links */
     .mobile-nav-link {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        /* Larger, premium typography */
         font-weight: var(--font-weight-bold);
         color: var(--text-strong);
-        padding: 12px 0;
-        border-bottom: 1px solid var(--border-light);
+        padding: 16px 0;
+        /* Generous touch target */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        /* Subtle separator */
         display: block;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s, padding-left 0.2s;
+    }
+
+    /* Staggered Animation on Open */
+    .mobile-menu.is-active .mobile-nav-link {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .mobile-menu.is-active .mobile-nav-link:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .mobile-menu.is-active .mobile-nav-link:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+
+    .mobile-menu.is-active .mobile-nav-link:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .mobile-menu.is-active .mobile-nav-link:nth-child(4) {
+        transition-delay: 0.25s;
+    }
+
+    .mobile-menu.is-active .mobile-nav-link:nth-child(5) {
+        transition-delay: 0.3s;
     }
 
     .mobile-nav-link:hover,
     .mobile-nav-link.is-active {
         color: var(--primary-600);
-        padding-left: 8px;
+        padding-left: 12px;
+        /* Deeper indent on hover */
+        border-bottom-color: var(--primary-200);
+    }
+
+    /* Remove last border */
+    .mobile-nav-link:last-child {
+        border-bottom: none;
     }
 
     /* Mobile CTA Area */
@@ -621,10 +665,23 @@ img {
         gap: var(--space-sm);
         padding-top: var(--space-md);
         border-top: 1px solid var(--border);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition-delay: 0s;
+    }
+
+    .mobile-menu.is-active .mobile-cta {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.4s;
     }
 
     .mobile-cta .btn {
         width: 100%;
+        padding: 16px;
+        /* Larger buttons for mobile */
+        font-size: 1rem;
     }
 }
 
@@ -638,15 +695,28 @@ img {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        /* Slightly larger but controlled */
+        line-height: 1.1;
+        margin-bottom: 1rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
     }
 
     h3 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-shell {
+        padding-top: 2rem;
+        /* Ensure content isn't under header */
     }
 }
 
