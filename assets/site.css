@@ -103,27 +103,30 @@ h6 {
 }
 
 h1 {
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: var(--font-weight-extrabold);
+    line-height: 1.1;
 }
 
 h2 {
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
     font-weight: var(--font-weight-bold);
+    line-height: 1.2;
 }
 
 h3 {
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: var(--font-weight-bold);
+    line-height: 1.3;
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
     font-weight: var(--font-weight-semibold);
 }
 
 h5 {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-semibold);
 }
 
@@ -357,9 +360,10 @@ img {
     align-items: center;
     gap: var(--space-xs);
     transition: color var(--transition-fast);
+    /* Safe defaults */
     white-space: nowrap;
-    /* Prevent wrapping */
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 .brand:hover {
@@ -518,176 +522,169 @@ img {
 }
 
 /* Responsive Design */
-/* Responsive Design & Mobile Menu */
+/* Responsive Design & Mobile Menu - Clean Slate Refactor */
 @media (max-width: 1024px) {
     :root {
-        --space-lg: 1.25rem;
-        --space-xl: 2rem;
-        --space-2xl: 2.5rem;
+        --space-lg: 1.5rem;
+        --space-xl: 2.5rem;
     }
 
-    /* Hide desktop nav elements */
+    /* 1. Header & Navigation */
+    .nav-bar {
+        height: 64px;
+        flex-wrap: nowrap;
+        /* Prevent brand wrapping */
+    }
+
+    .brand {
+        font-size: 1.25rem;
+        /* Slightly smaller on mobile to fit */
+        white-space: nowrap;
+        flex-shrink: 0;
+        z-index: 60;
+        /* Above menu if needed, though menu covers everything usually */
+    }
+
+    /* Hide Desktop Elements */
     .nav-links,
     .cta-row {
         display: none;
     }
 
-    .nav-bar {
-        height: 64px;
-        flex-wrap: nowrap;
-        /* Prevent wrapping causing 2 lines */
-    }
-
-    .section {
-        padding: 64px 0;
-    }
-
-    .shell,
-    .container,
-    .container-custom {
-        padding-left: var(--space-md) !important;
-        padding-right: var(--space-md) !important;
-    }
-
-    .footer-meta {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .grid-two,
-    .grid-three,
-    .grid-four {
-        grid-template-columns: 1fr;
-        gap: var(--space-xl);
-        /* Increased breathing room for stacked cards */
-    }
-
-    /* Mobile Menu Button */
+    /* Mobile Hamburger Button */
     .mobile-menu-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        /* Prevent shrinking */
+        width: 44px;
+        /* Larger touch target */
+        height: 44px;
+        min-width: 44px;
         border: 1px solid var(--border);
         background: var(--surface);
         border-radius: var(--radius-md);
-        color: var(--text);
+        color: var(--text-strong);
         cursor: pointer;
-        z-index: 60;
+        z-index: 70;
+        /* Highest Z-index to be clickable */
         transition: all var(--transition-fast);
+        outline: none;
     }
 
-    .mobile-menu-btn:hover {
+    .mobile-menu-btn:hover,
+    .mobile-menu-btn:active {
         background: var(--surface-hover);
+        border-color: var(--primary-200);
         color: var(--primary-600);
     }
 
-    /* Mobile Menu Container */
+    /* 2. Full Screen Mobile Menu Overlay */
     .mobile-menu {
         position: fixed;
         inset: 0;
-        background: #ffffff !important;
-        /* Force solid background */
-        /* Increased opacity to prevent text overlap */
-        z-index: 55;
-        padding: 90px var(--space-lg) var(--space-lg);
-        /* More top padding for breathing room */
+        /* Full screen */
+        background-color: #ffffff;
+        /* Solid White */
+        z-index: 60;
+        /* Below button (70) */
+        padding: 80px var(--space-lg) var(--space-lg);
+        /* Top padding clears header */
         display: flex;
         flex-direction: column;
-        gap: var(--space-md);
-        transform: translateX(100%);
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        /* Smooth bezel curve */
-        /* backdrop-filter: blur(20px); removed since we are solid now */
+        justify-content: flex-start;
+        /* Items start from top */
+        overflow-y: auto;
+        /* Allow scrolling if huge menu */
+
+        /* Transition */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     }
 
     .mobile-menu.is-active {
-        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
-    /* Mobile Nav Links */
+    /* Mobile Nav Links - Centralized & Prominent */
     .mobile-nav-link {
-        font-size: 1.5rem;
-        /* Larger, premium typography */
-        font-weight: var(--font-weight-bold);
+        font-size: 1.75rem;
+        /* Large, thumb-friendly */
+        font-weight: 800;
         color: var(--text-strong);
         padding: 16px 0;
-        /* Generous touch target */
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        /* Subtle separator */
-        display: block;
-        opacity: 0;
-        transform: translateX(20px);
-        transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s, padding-left 0.2s;
-    }
-
-    /* Staggered Animation on Open */
-    .mobile-menu.is-active .mobile-nav-link {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    .mobile-menu.is-active .mobile-nav-link:nth-child(1) {
-        transition-delay: 0.1s;
-    }
-
-    .mobile-menu.is-active .mobile-nav-link:nth-child(2) {
-        transition-delay: 0.15s;
-    }
-
-    .mobile-menu.is-active .mobile-nav-link:nth-child(3) {
-        transition-delay: 0.2s;
-    }
-
-    .mobile-menu.is-active .mobile-nav-link:nth-child(4) {
-        transition-delay: 0.25s;
-    }
-
-    .mobile-menu.is-active .mobile-nav-link:nth-child(5) {
-        transition-delay: 0.3s;
+        border-bottom: 1px solid var(--border-light);
+        width: 100%;
+        text-align: center;
+        /* Center aligned for focus */
+        transition: color 0.2s ease;
     }
 
     .mobile-nav-link:hover,
-    .mobile-nav-link.is-active {
+    .mobile-nav-link:active {
         color: var(--primary-600);
-        padding-left: 12px;
-        /* Deeper indent on hover */
-        border-bottom-color: var(--primary-200);
     }
 
-    /* Remove last border */
-    .mobile-nav-link:last-child {
-        border-bottom: none;
-    }
-
-    /* Mobile CTA Area */
+    /* Mobile CTA Section */
     .mobile-cta {
         margin-top: auto;
+        /* Push to bottom */
+        padding-top: var(--space-xl);
         display: flex;
         flex-direction: column;
-        gap: var(--space-sm);
-        padding-top: var(--space-md);
-        border-top: 1px solid var(--border);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-        transition-delay: 0s;
-    }
-
-    .mobile-menu.is-active .mobile-cta {
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: 0.4s;
+        gap: var(--space-md);
+        width: 100%;
     }
 
     .mobile-cta .btn {
         width: 100%;
         padding: 16px;
-        /* Larger buttons for mobile */
-        font-size: 1rem;
+        font-size: 1.1rem;
+        justify-content: center;
+    }
+
+    /* 3. Grid & Layout Reflow */
+    .shell,
+    .container,
+    .container-custom {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    /* Stacking grids vertically on mobile */
+    .grid-two,
+    .grid-three,
+    .grid-four {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        /* Consistent vertical rhythm */
+    }
+
+    /* Footer changes */
+    .footer-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-lg);
+    }
+}
+
+/* 4. Small Mobile Improvements */
+@media (max-width: 400px) {
+    .brand {
+        font-size: 1.1rem;
+        /* Scale down logo slightly */
+    }
+
+    h1 {
+        font-size: 2.25rem !important;
+        /* Force readable sizing */
     }
 }
 
@@ -696,33 +693,6 @@ img {
     .mobile-menu-btn,
     .mobile-menu {
         display: none !important;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2.5rem;
-        /* Slightly larger but controlled */
-        line-height: 1.1;
-        margin-bottom: 1rem;
-    }
-
-    h2 {
-        font-size: 1.25rem;
-        line-height: 1.4;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .hero-shell {
-        padding-top: 2rem;
-        /* Ensure content isn't under header */
     }
 }
 
