@@ -545,10 +545,10 @@ img {
         /* Above menu if needed, though menu covers everything usually */
     }
 
-    /* Hide Desktop Elements */
+    /* Hide Desktop Elements - FORCE override tailwind utilities */
     .nav-links,
     .cta-row {
-        display: none;
+        display: none !important;
     }
 
     /* Mobile Hamburger Button */
@@ -565,8 +565,8 @@ img {
         border-radius: var(--radius-md);
         color: var(--text-strong);
         cursor: pointer;
-        z-index: 70;
-        /* Highest Z-index to be clickable */
+        z-index: 10000;
+        /* Highest Z-index to be clickable, above menu */
         transition: all var(--transition-fast);
         outline: none;
     }
@@ -585,8 +585,8 @@ img {
         /* Full screen */
         background-color: #ffffff;
         /* Solid White */
-        z-index: 60;
-        /* Below button (70) */
+        z-index: 9999;
+        /* Below button (10000) but above EVERYTHING else */
         padding: 80px var(--space-lg) var(--space-lg);
         /* Top padding clears header */
         display: flex;
