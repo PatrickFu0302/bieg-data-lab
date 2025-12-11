@@ -337,10 +337,18 @@ img {
     position: sticky;
     top: 0;
     z-index: 50;
+    /* Removed backdrop/background from here to prevent fixed child clipping */
+}
+
+/* New background layer that handles the blur */
+.header-bg {
+    position: absolute;
+    inset: 0;
     backdrop-filter: blur(12px);
     background: rgba(255, 255, 255, 0.92);
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-xs);
+    z-index: 1;
 }
 
 .nav-bar {
@@ -349,6 +357,9 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: var(--space-lg);
+    position: relative;
+    z-index: 50;
+    /* Ensure nav content stays above bg and menu if needed */
 }
 
 .brand {
@@ -582,11 +593,10 @@ img {
     .mobile-menu {
         position: fixed;
         inset: 0;
-        /* Full screen */
+        /* Full screen - works now because header has no transform/filter */
         background-color: #ffffff;
-        /* Solid White */
-        z-index: 9999;
-        /* Below button (10000) but above EVERYTHING else */
+        z-index: 20;
+        /* Above header-bg(1) but BELOW nav-bar(50) so button remains clickable */
         padding: 80px var(--space-lg) var(--space-lg);
         /* Top padding clears header */
         display: flex;

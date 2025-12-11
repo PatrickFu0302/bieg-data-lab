@@ -139,6 +139,7 @@
 
         return `
             <header class="site-header">
+                <div class="header-bg"></div>
                 <div class="shell nav-bar">
                     <a class="brand" href="index.html">
                         <i data-lucide="zap" class="w-5 h-5"></i>
