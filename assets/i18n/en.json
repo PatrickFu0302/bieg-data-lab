@@ -1,5 +1,6 @@
 {
     "nav": {
+        "brand": "BIEG Data Lab",
         "home": "Home",
         "team": "Team",
         "research": "Research",
@@ -13,8 +14,6 @@
         "hero_badge": "Building Intelligence & Energy Grid",
         "hero_title": "BIEG Data Lab",
         "hero_desc": "Building Intelligence and Energy Grid Data Laboratory. Focusing on modeling, forecasting, and optimization of smart building and grid data, connecting energy decisions from city to community.",
-        "hero_headline_html": "BIEG Data Lab",
-        "hero_intro": "Building Intelligence and Energy Grid Data Laboratory. Focusing on modeling, forecasting, and optimization of smart building and grid data, connecting energy decisions from city to community.",
         "hero_btn_research": "Explore Research",
         "hero_btn_team": "Meet the Team",
         "cta_research": "View Research",

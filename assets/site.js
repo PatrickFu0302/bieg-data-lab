@@ -142,7 +142,7 @@
                 <div class="shell nav-bar">
                     <a class="brand" href="index.html">
                         <i data-lucide="zap" class="w-5 h-5"></i>
-                        <span data-i18n="home.hero_title">${I18n.t('home.hero_title')}</span>
+                        <span data-i18n="nav.brand">${I18n.t('nav.brand')}</span>
                     </a>
                     
                     <!-- Desktop Nav -->
