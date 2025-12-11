@@ -620,22 +620,30 @@ img {
     }
 
     /* Mobile Nav Links - Centralized & Prominent */
+    /* Mobile Nav Links - Centralized & Prominent */
     .mobile-nav-link {
-        font-size: 1.75rem;
-        /* Large, thumb-friendly */
-        font-weight: 800;
+        font-size: 1.5rem;
+        /* More elegant size */
+        font-weight: 600;
+        /* Semi-bold instead of ExtraBold */
         color: var(--text-strong);
-        padding: 16px 0;
-        border-bottom: 1px solid var(--border-light);
+        padding: 12px 0;
+        /* Slightly tighter vertical spacing */
         width: 100%;
         text-align: center;
         /* Center aligned for focus */
-        transition: color 0.2s ease;
+        transition: all 0.2s ease;
+        border-radius: var(--radius-md);
+        /* For hover effect */
     }
 
     .mobile-nav-link:hover,
     .mobile-nav-link:active {
         color: var(--primary-600);
+        background-color: var(--surface-hover);
+        /* Subtle touch feedback */
+        transform: scale(1.05);
+        /* Gentle zoom */
     }
 
     /* Mobile CTA Section */
