@@ -13,7 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/site.css?v=3">
+    <link rel="stylesheet" href="assets/site.css?v=4">
+    <script src="assets/site.js?v=4"></script>
     <style>
         .animate-scroll {
             animation: scroll 30s linear infinite;
@@ -21,6 +22,22 @@
 
         .animate-scroll:hover {
             animation-play-state: paused;
+        }
+
+        /* CRITICAL FIXES - INLINED TO BYPASS CACHE */
+        .mobile-menu {
+            background: #ffffff !important;
+            backdrop-filter: none !important;
+        }
+
+        .brand,
+        .brand span {
+            white-space: nowrap !important;
+            flex-shrink: 0 !important;
+        }
+
+        .nav-bar {
+            flex-wrap: nowrap !important;
         }
     </style>
 </head>
