@@ -110,7 +110,32 @@
             return `<a class="${isActive}" href="${link.href}" data-i18n="nav.${link.labelKey}">${t(link.labelKey)}</a>`;
         }).join('');
 
+        // Mobile Nav Items
+        const mobileNavItems = links.map(link => {
+            const isActive = active === link.id ? 'mobile-nav-link is-active' : 'mobile-nav-link';
+            return `<a class="${isActive}" href="${link.href}" data-i18n="nav.${link.labelKey}">${t(link.labelKey)}</a>`;
+        }).join('');
+
         const langBtnLabel = I18n.lang === 'zh' ? 'EN' : '中文';
+
+        // Mobile Menu HTML
+        const mobileMenu = `
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="flex flex-col gap-2">
+                    ${mobileNavItems}
+                </nav>
+                <div class="mobile-cta">
+                    <button id="mobile-lang-toggle" class="btn btn-ghost w-full justify-center">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                        <span>${langBtnLabel}</span>
+                    </button>
+                    <a class="btn btn-primary w-full justify-center" href="join.html">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <span data-i18n="nav.join">${t('join')}</span>
+                    </a>
+                </div>
+            </div>
+        `;
 
         return `
             <header class="site-header">
@@ -119,7 +144,11 @@
                         <i data-lucide="zap" class="w-5 h-5"></i>
                         <span data-i18n="home.hero_title">${I18n.t('home.hero_title')}</span>
                     </a>
+                    
+                    <!-- Desktop Nav -->
                     <nav class="nav-links">${navItems}</nav>
+                    
+                    <!-- Desktop CTA -->
                     <div class="cta-row flex items-center gap-4">
                          <button id="lang-toggle" class="text-sm font-semibold text-slate-600 hover:text-blue-600 border border-slate-300 rounded px-3 py-1 transition-colors">
                             ${langBtnLabel}
@@ -129,7 +158,13 @@
                             <span data-i18n="nav.join">${t('join')}</span>
                         </a>
                     </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
                 </div>
+                ${mobileMenu}
             </header>
         `;
     }
@@ -178,12 +213,53 @@
             node.innerHTML = footerTemplate();
         });
 
-        // Re-bind Lang Toggle Event
+        // Re-bind Lang Toggle Event (Desktop)
         const langBtn = document.getElementById('lang-toggle');
         if (langBtn) {
             langBtn.onclick = async () => {
                 await I18n.toggleLang();
             };
+        }
+
+        // Re-bind Lang Toggle Event (Mobile)
+        const mobileLangBtn = document.getElementById('mobile-lang-toggle');
+        if (mobileLangBtn) {
+            mobileLangBtn.onclick = async () => {
+                await I18n.toggleLang();
+            };
+        }
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('is-active');
+                const isOpen = mobileMenu.classList.contains('is-active');
+
+                // Toggle icon
+                const icon = menuBtn.querySelector('svg'); // Lucide renders as svg
+                // We'll re-render icons anyway, but for immediate feedback:
+                // Actually, let's just initIcons after toggle or use innerHTML replacement carefully
+                // Simplest is to just swap the icon name attribute and call createIcons if we want dynamic,
+                // but re-running createIcons is cheap enough.
+
+                // Better approach: Check closest 'i' or just reset content
+                menuBtn.innerHTML = isOpen
+                    ? `<i data-lucide="x" class="w-6 h-6"></i>`
+                    : `<i data-lucide="menu" class="w-6 h-6"></i>`;
+                window.lucide.createIcons();
+            });
+
+            // Close on link click
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('is-active');
+                    menuBtn.innerHTML = `<i data-lucide="menu" class="w-6 h-6"></i>`;
+                    window.lucide.createIcons();
+                });
+            });
         }
 
         // Re-init icons since we rewrote HTML
