@@ -57,7 +57,7 @@
     },
     "team": {
         "title": "研究團隊",
-        "subtitle": "我們是一群充滿熱忱的研究者，致力於探索建築環境與能源系統的資料科學。",
+        "subtitle": "我們是一群充滿熱忱的研究者，致力於探索生物與環境的互動關係。",
         "section_pi": "Principal Investigator",
         "section_postdoc": "博士後研究員",
         "section_ra": "專任研究助理",
@@ -201,7 +201,7 @@
         "section_title": "加入我們",
         "section_desc": "BIEG Data Lab 正在積極尋找對智慧建築、能源數據科學與永續發展充滿熱情的夥伴。我們歡迎具備以下背景的碩士生、博士生、博士後與研究助理加入我們的行列。",
         "contact_msg": "若您對我們的研究方向感興趣，請將您的簡歷與成績單寄至以下信箱。",
-        "contact_btn": "聯絡我們: chunfu@ntu.edu.tw"
+        "contact_btn": "聯絡我們: patrickfu0302@gmail.com"
     },
     "research": {
         "hero_badge": "Research Projects",
