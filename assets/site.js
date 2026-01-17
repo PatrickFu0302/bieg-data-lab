@@ -187,7 +187,7 @@
                     </div>
                     <div class="muted" data-i18n="footer.meta">${footerMeta}</div>
                     <div class="footer-links">
-                        <a class="footer-link" href="mailto:patrickfu0302@gmail.com">
+                        <a class="footer-link" href="mailto:chunfu@ntu.edu.tw">
                             <i data-lucide="mail" class="w-4 h-4"></i>Email
                         </a>
                         <a class="footer-link" href="https://linkedin.com/in/chun-fu" target="_blank" rel="noreferrer">
